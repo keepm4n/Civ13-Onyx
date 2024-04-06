@@ -20,7 +20,7 @@
 			if (map && map.ID != MAP_TRIBES && map.ID != MAP_THREE_TRIBES && map.ID != MAP_FOUR_KINGDOMS && map.ID != MAP_NOMADS_NEW_WORLD && !map.is_fantrace)
 				message = pick("uh uh uh!","UH UH", "OOGA", "BOOGA")
 				animalistic = TRUE
-	message = capitalize(sanitize(message))
+	message = sanitize(message)
 
 	for (var/i in dictionary_list)
 		message = replacetext(message,i[1],i[2])
